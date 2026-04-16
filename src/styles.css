@@ -1,0 +1,36 @@
+body {
+  background-color: #f5f7fb;
+}
+
+.login-container {
+  height: 100vh;
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+}
+
+.login-card {
+  width: 350px;
+  border-radius: 12px;
+}
+
+.doctor-card:hover {
+  transform: scale(1.03);
+  transition: 0.3s;
+}
+
+.dashboard-card {
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-5px);
+}
+
+
+.card {
+  border-radius: 12px;
+}
+
+button {
+  font-weight: 500;
+}

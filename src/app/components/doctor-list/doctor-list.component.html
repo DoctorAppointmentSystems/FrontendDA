@@ -1,0 +1,33 @@
+<div class="container mt-4">
+  <h2 class="mb-3">Find Doctors</h2>
+
+  <input
+    class="form-control mb-3"
+    placeholder="Search doctor..."
+    [(ngModel)]="searchText"
+  />
+
+  <div class="row">
+    <div class="col-md-4" *ngFor="let doc of doctors">
+      <div class="card shadow-sm mb-4 doctor-card">
+        <div class="card-body">
+          <h5>{{ doc.doctorName }}</h5>
+
+          <p class="text-muted">Experience: {{ doc.experienceYears }} years</p>
+
+          <p>
+            <span class="badge bg-success">
+              ₹{{ doc.consultationFeeOnline }} Online
+            </span>
+          </p>
+          <a
+            [routerLink]="['/patient/book', doc.doctorId]"
+            class="btn btn-primary w-100"
+          >
+            Book Appointment
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
