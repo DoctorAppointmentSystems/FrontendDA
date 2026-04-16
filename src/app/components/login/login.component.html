@@ -1,0 +1,25 @@
+<div class="login-container d-flex align-items-center justify-content-center">
+  <div class="card shadow-lg p-4 login-card">
+    <h3 class="text-center mb-4 text-primary">Doctor Appointment</h3>
+
+    <form (ngSubmit)="login()">
+      <div class="mb-3">
+        <label>Email</label>
+        <input type="email" class="form-control" [(ngModel)]="model.email" name="email" required>
+      </div>
+
+      <div class="mb-3">
+        <label>Password</label>
+        <input type="password" class="form-control" [(ngModel)]="model.password" name="password" required>
+      </div>
+
+      <div *ngIf="errorMessage" class="alert alert-danger">
+        {{errorMessage}}
+      </div>
+
+      <button class="btn btn-primary w-100" [disabled]="isLoading">
+        {{isLoading ? 'Logging in...' : 'Login'}}
+      </button>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,35 @@
+<div class="container mt-4" *ngIf="doctor">
+
+  <h3 class="mb-3 text-primary">{{doctor.doctorName}}</h3>
+
+  <div class="card p-4 shadow">
+
+    <div class="mb-3">
+      <label>Date</label>
+      <input type="date" class="form-control"
+             [(ngModel)]="appointment.appointmentDate">
+    </div>
+
+    <div class="mb-3">
+      <label>Time</label>
+      <input type="time" class="form-control"
+             [(ngModel)]="appointment.slotTime">
+    </div>
+
+    <div class="mb-3">
+      <label>Mode</label>
+      <select class="form-control"
+              [(ngModel)]="appointment.mode">
+        <option value="Online">Online</option>
+        <option value="Offline">Offline</option>
+      </select>
+    </div>
+
+    <button class="btn btn-success w-100"
+            (click)="bookAppointment()">
+      Book Appointment
+    </button>
+
+  </div>
+
+</div>

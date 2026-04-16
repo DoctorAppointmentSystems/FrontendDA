@@ -1,0 +1,16 @@
+<div class="container mt-5">
+  <div class="card shadow p-4">
+    <h3 class="text-center mb-4">Register</h3>
+
+    <input class="form-control mb-2" placeholder="Full Name" [(ngModel)]="model.fullName">
+    <input class="form-control mb-2" placeholder="Email" [(ngModel)]="model.email">
+    <input class="form-control mb-2" type="password" placeholder="Password" [(ngModel)]="model.password">
+    <input class="form-control mb-3" placeholder="Phone Number" [(ngModel)]="model.phoneNumber">
+
+    <button class="btn btn-success w-100" (click)="register()">Register</button>
+
+    <div *ngIf="success" class="alert alert-success mt-2">
+      {{success}}
+    </div>
+  </div>
+</div>
